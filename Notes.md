@@ -1,5 +1,5 @@
 - [ ] Section 3: Javascript Foundation II 0/26 | 2hr 31min
-	- [ ] 028. Section Overview | 1min
+	- [x] 028. Section Overview | 1min
 	  - [ ] Execution Context
 	  - [ ] Lexical Environment
 	  - [ ] Scope Chain
@@ -9,7 +9,7 @@
 	  - [ ] Dynamic vs Lexical Scope
 	  - [ ] this, call, apply, bind
 	  - [ ] IIFE
-	- [ ] 029. Execution Context | 9min
+	- [x] 029. Execution Context | 9min
 	  - How do we run code in JavaScript?
 	    - Assign Variables
 	    - Run Functions
@@ -25,6 +25,11 @@
 		- Creation Phase
 		- Execution Phase (Run my code)
 	- [ ] 030. Lexical Environment | 6min
+	  - "Where you write something"
+	  - "Little Universes that get created every time we create an Execution Context"
+	  - Lexical analysis >> "What universe is it part of?"
+	    - Where did we write the function?
+	  - **At Compile Time** Where was the code written?
 	- [ ] 031. Hoisting | 11min
 	- [ ] 032. Exercise: Hoisting | 4min
 	- [ ] 033. Exercise: Hoisting 2 | 7min
