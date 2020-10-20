@@ -1,27 +1,28 @@
 - [ ] Section 3: Javascript Foundation II 0/26 | 2hr 31min
-	- [ ] 28. Section Overview | 1min
-	- [ ] 29. Execution Context | 9min
-	- [ ] 30. Lexical Environment | 6min
-	- [ ] 31. Hoisting | 11min
-	- [ ] 32. Exercise: Hoisting | 4min
-	- [ ] 33. Exercise: Hoisting 2 | 7min
-	- [ ] 34. Exercise: Hoisting 3 | 1min
-	- [ ] 35. Function Invocation | 7min
-	- [ ] 36. arguments Keyword | 4min
-	- [ ] 37. Variable Environment | 7min
-	- [ ] 38. Scope Chain | 12min
-	- [ ] 39. [[scope]] | 2min
-	- [ ] 40. Exercise: JS is Weird | 5min
-	- [ ] 41. Function Scope vs Block Scope | 4min
-	- [ ] 42. Exercise: Block Scope | 4min
-	- [ ] 43. Global Variables | 4min
-	- [ ] 44. IIFE | 14min
-	- [ ] 45. this Keyword | 17min
-	- [ ] 46. Exercise: Dynamic Scope vs Lexical Scope | 12min
-	- [ ] 47. call(), apply(), bind() | 11min
-	- [ ] 48. Exercise: call(), apply() | 1min
-	- [ ] 49. bind() and currying | 4min
-	- [ ] 50. Exercise: this Keyword | 3min
-	- [ ] 51. Exercise: this Keyword 2 | 1min
-	- [ ] 52. Context vs Scope | 1min
-	- [ ] 53. Section Review | 3min
+	- [ ] 028. Section Overview | 1min
+	  - A
+	- [ ] 029. Execution Context | 9min
+	- [ ] 030. Lexical Environment | 6min
+	- [ ] 031. Hoisting | 11min
+	- [ ] 032. Exercise: Hoisting | 4min
+	- [ ] 033. Exercise: Hoisting 2 | 7min
+	- [ ] 034. Exercise: Hoisting 3 | 1min
+	- [ ] 035. Function Invocation | 7min
+	- [ ] 036. arguments Keyword | 4min
+	- [ ] 037. Variable Environment | 7min
+	- [ ] 038. Scope Chain | 12min
+	- [ ] 039. [[scope]] | 2min
+	- [ ] 040. Exercise: JS is Weird | 5min
+	- [ ] 041. Function Scope vs Block Scope | 4min
+	- [ ] 042. Exercise: Block Scope | 4min
+	- [ ] 043. Global Variables | 4min
+	- [ ] 044. IIFE | 14min
+	- [ ] 045. this Keyword | 17min
+	- [ ] 046. Exercise: Dynamic Scope vs Lexical Scope | 12min
+	- [ ] 047. call(), apply(), bind() | 11min
+	- [ ] 048. Exercise: call(), apply() | 1min
+	- [ ] 049. bind() and currying | 4min
+	- [ ] 050. Exercise: this Keyword | 3min
+	- [ ] 051. Exercise: this Keyword 2 | 1min
+	- [ ] 052. Context vs Scope | 1min
+	- [ ] 053. Section Review | 3min
