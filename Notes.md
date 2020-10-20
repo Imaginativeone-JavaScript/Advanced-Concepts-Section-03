@@ -23,6 +23,7 @@
 		- Take a look at an empty file
 		- this and window are there this === window (Node: "Global")
 		- Creation Phase
+		  - HOISTING
 		- Execution Phase (Run my code)
 	- [ ] 030. Lexical Environment | 6min
 	  - "Where you write something"
@@ -31,6 +32,8 @@
 	    - Where did we write the function?
 	  - **At Compile Time** Where was the code written?
 	- [ ] 031. Hoisting | 11min
+	  - The behavior of moving variables and function-declarations to the top(s) of their respective environments
+	  
 	- [ ] 032. Exercise: Hoisting | 4min
 	- [ ] 033. Exercise: Hoisting 2 | 7min
 	- [ ] 034. Exercise: Hoisting 3 | 1min
