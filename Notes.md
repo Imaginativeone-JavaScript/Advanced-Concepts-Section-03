@@ -1,6 +1,14 @@
 - [ ] Section 3: Javascript Foundation II 0/26 | 2hr 31min
 	- [ ] 028. Section Overview | 1min
-	  - A
+	  - [ ] Execution Context
+	  - [ ] Lexical Environment
+	  - [ ] Scope Chain
+	  - [ ] Hoisting
+	  - [ ] Function Invocation
+	  - [ ] Function Scope vs Block Scope
+	  - [ ] Dynamic vs Lexical Scope
+	  - [ ] this, call, apply, bind
+	  - [ ] IIFE
 	- [ ] 029. Execution Context | 9min
 	- [ ] 030. Lexical Environment | 6min
 	- [ ] 031. Hoisting | 11min
