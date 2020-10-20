@@ -10,6 +10,20 @@
 	  - [ ] this, call, apply, bind
 	  - [ ] IIFE
 	- [ ] 029. Execution Context | 9min
+	  - How do we run code in JavaScript?
+	    - Assign Variables
+	    - Run Functions
+	    - As soon as a pair of parentheses is encountered >> Execution Context
+	      - The context is placed onto the Call Stack
+	    - Consider: "The Global Execution Context"
+	      - global()
+	        - Popped off the stack after our final line of code is run
+		- Global Object
+		- this
+		- Take a look at an empty file
+		- this and window are there this === window (Node: "Global")
+		- Creation Phase
+		- Execution Phase (Run my code)
 	- [ ] 030. Lexical Environment | 6min
 	- [ ] 031. Hoisting | 11min
 	- [ ] 032. Exercise: Hoisting | 4min
