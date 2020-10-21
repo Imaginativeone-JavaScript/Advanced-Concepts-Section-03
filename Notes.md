@@ -607,6 +607,19 @@
 	```
 	
 	- [ ] 051. Exercise: this Keyword 2 | 1min
+	
+	```javascript
+	const character = {
+	  name: 'Simon',
+	  getCharacter() {
+	    return this.name;
+	  }
+	};
+	const giveMeTheCharacterNOW = character.getCharacter.bind(character);
+
+
+	console.log('?', giveMeTheCharacterNOW()); // ? Simon
+	```
 	- [ ] 052. Context vs Scope | 1min
 	
 	  - "Context" relates to the calling function
