@@ -163,7 +163,7 @@
 	india(); 	// Create an Execution Context // warm
 	
 	function marry(person1, person2) {
-	  console.log(arguments);				// arguments {0: 'Tim', 1: 'Tina' }
+	  console.log('arguments', arguments);			// arguments {0: 'Tim', 1: 'Tina' }
 	  return `${person1} is now married to ${person2}`;	// => 'Tim is now married to Tina'
 	}
 	
