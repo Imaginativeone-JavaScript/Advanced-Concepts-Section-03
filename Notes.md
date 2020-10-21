@@ -384,6 +384,28 @@
 	  ```
 	  
 	- [ ] 046. Exercise: Dynamic Scope vs Lexical Scope | 12min
+	
+	```javascript
+	const a = function() {
+	
+	  console.log('a', this);
+	  
+	  const b = function() {
+	  
+	    console.log('b', this);
+	    
+	    const c = {
+	    
+	      hi: function() {
+	        console.log('c', this);
+	      }
+	    }
+	    c.hi();
+	  }
+	  b();  // There's nothing to the left of b >> Window Object
+	}
+	```
+	
 	- [ ] 047. call(), apply(), bind() | 11min
 
 	- [ ] 048. Exercise: call(), apply() | 1min
