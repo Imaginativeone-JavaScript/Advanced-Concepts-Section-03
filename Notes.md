@@ -63,8 +63,8 @@
 	    console.log('ohhh la la la');
 	  }
 	  
-	  var sing2 = function() { // function EXPRESSION; sing2 gets hoisted and equals undefined
-	  			   // sing2() must follow its call to be defined
+	  var sing2 = function() { 	// function EXPRESSION; sing2 gets hoisted and equals undefined
+	  				// sing2() must follow its call to be defined
 	    console.log('uhhh la la la');
 	  }
 
@@ -75,6 +75,26 @@
 	  ```
 
 	- [ ] 032. Exercise: Hoisting | 4min
+	
+	```javascript
+	one = undefined; // DURING HOISTING, 'one' = 'undefined'; 2nd line is ignored
+	
+	var one = 1;
+	var one = 2;
+	
+	console.log(one); // 'one' yields the number 2
+	```
+	
+	```javascript
+	function a() {
+	  console.log('hi');
+	}
+	
+	function b() {
+	  console.log('bye');
+	}
+	```
+	
 	- [ ] 033. Exercise: Hoisting 2 | 7min
 	- [ ] 034. Exercise: Hoisting 3 | 1min
 	- [ ] 035. Function Invocation | 7min
