@@ -341,8 +341,48 @@
 	  
 	- [ ] 045. this Keyword | 17min
 	
-	  - **this** is the object that the **function** is a property of 
+	  - **this** is the object that the **function** is a property of
+	  
+	  ```javascript
+	  const obj = {
+	    name: 'Billy',
+	    sing: function() {
+	      console.log('this', this);
+	      return 'lalala ' + this.name;
+	    }
+	  }
+	  
+	  obj.sing() // 'lalala Billy
+	  ```
 	
+	  ```javascript
+	  const obj = {
+	    name: 'Billy',
+	    sing: function() {
+	      console.log('this', this);
+	      return 'lalala ' + this.name;
+	    },
+	    singAgain: this.sing() + '!'
+	  }
+	  ```
+	  
+	  ```javascript
+	  importantPerson() {
+	    console.log(this.name);
+	  }
+	  
+	  const name = 'Sunny';
+	  
+	  const obj1 = {
+	    name: 'Cassy',
+	    importantPerson: importantPerson  
+	  }
+	  const obj2 = {
+	    name: 'Jacob',
+	    importantPerson: importantPerson  
+	  }
+	  ```
+	  
 	- [ ] 046. Exercise: Dynamic Scope vs Lexical Scope | 12min
 	- [ ] 047. call(), apply(), bind() | 11min
 
