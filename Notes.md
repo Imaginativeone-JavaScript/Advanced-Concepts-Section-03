@@ -523,9 +523,56 @@
 	  
 	  **apply()** is very similar to call, except that it takes an array of parameters
 	  
-	
+	  - bind()
+	  
+	    - bind() returns a new function, with a certain context and parameters
+	    - usually used when I want a function to be called later on
+
+	    ```javascript
+	    const wizard = {
+	      name: 'Merlin',
+	      health: 50,
+	      heal(num1, num2) {
+	        return this.health += num1 + num2;
+	      }
+	    }
+	  
+	    // How can I borrow the heal() method for the archer?
+	    // wizard.heal.call(archer);
+	  
+	    const archer = {
+	      name: 'Robin Hood',
+	      health: 30
+	    }
+	  
+	    console.log('1', archer);
+	    // wizard.heal.bind(archer, 100, 30); // Nothing happens; it doesn't call a function. It returns a function.
+	    const healArcher = wizard.heal.bind(archer, 100, 30); // Nothing happens; it doesn't call a function. It returns a function.
+	    healArcher();
+	    console.log('2', archer);
+	    ```
+
 	- [ ] 048. Exercise: call(), apply() | 1min
+	
 	- [ ] 049. bind() and currying | 4min
+	
+	  - I learned about function borrowing with call and apply
+	  - I also learned about using bind to store a borrowed function
+	  - Function Currying
+	  
+	  ```javascript
+	  function multiply(a, b) {
+	    return a*b;
+	    // "Currying" involves only using a partial parameter list
+	  }
+	  
+	  let multiplyByTwo = multiply.bind(this, 2);
+	  console.log(multiplyByTwo(4)); // 8
+	  
+	  let multiplyByTen = multiply.bind(this, 2);
+	  console.log(multiplyByTen(4)); // 40
+	  ```
+	
 	- [ ] 050. Exercise: this Keyword | 3min
 	- [ ] 051. Exercise: this Keyword 2 | 1min
 	- [ ] 052. Context vs Scope | 1min
