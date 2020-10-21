@@ -192,6 +192,30 @@
 	  ```
 	  
 	- [ ] 037. Variable Environment | 7min
+	
+	  - Variables need to know how they relate to one another
+	  
+	  ```javascript
+	  function two() {	// CREATION PHASE: Hoisted
+	    var isValid;	// Undefined
+	  }
+	  
+	  function one() {	// CREATION PHASE: Hoisted
+	    var isValid = true;	// EXECUTION PHASE: local variable environment
+	    two();		// New Execution Context
+	  }
+	  
+	  var isValid = false; 	// CREATION PHASE: Hoisted; isValid = undefined
+	  			// EXECUTION PHASE: Assigned false
+	  
+	  one();		// EXECUTION PHASE: Execution Context Created
+	  
+	  // Call stack, Execution Contexts ----------------------------------
+	  // two() // placed into the stack after one()	// isValid = undefined
+	  // one() // placed into the stack first	// isValid = true
+	  // global() 					// isValid = false
+	  ```
+	
 	- [ ] 038. Scope Chain | 12min
 	- [ ] 039. [[scope]] | 2min
 	- [ ] 040. Exercise: JS is Weird | 5min
