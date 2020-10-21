@@ -574,6 +574,26 @@
 	  ```
 	
 	- [ ] 050. Exercise: this Keyword | 3min
+	
+	```javascript
+	var b = {
+	  name: 'jay',
+	  say() { console.log(this) }
+	}
+	var c = {
+	  name: 'jay',
+	  say() { return function() { console.log(this) }} // c.say()() >> Window Object
+	}
+	var d = {
+	  name: 'jay',
+	  say() { return () => console.log(this) } d.say()() >> 'd' Object
+	}
+	```
+	
 	- [ ] 051. Exercise: this Keyword 2 | 1min
 	- [ ] 052. Context vs Scope | 1min
+	
+	  - "Context" relates to the calling function
+	  - "Scope" relates to the visibility of variables/functions
+	
 	- [ ] 053. Section Review | 3min
