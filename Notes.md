@@ -294,11 +294,33 @@
 	```
 	
 	- [ ] 042. Exercise: Block Scope | 4min
+	
+	```javascript
+	function loop() {
+	  for (var i=0; i<5; i++) {
+	    console.log(i);		// 1 through 4
+	  }
+	  console.log('final', i); 	// 5
+	}
+	
+	loop();
+	
+	What happens with let? Inaccessible
+	```
+	
 	- [ ] 043. Global Variables | 4min
+	  - Global variables are "evil"?
+	  - Polluting the global namespace
+	  - Limited Memory, makes the Browser slow/crash
+	  - Garbage Collection
+	  - Variable Collision/Overwrites
+	
 	- [ ] 044. IIFE | 14min
 	- [ ] 045. this Keyword | 17min
+	
 	- [ ] 046. Exercise: Dynamic Scope vs Lexical Scope | 12min
 	- [ ] 047. call(), apply(), bind() | 11min
+
 	- [ ] 048. Exercise: call(), apply() | 1min
 	- [ ] 049. bind() and currying | 4min
 	- [ ] 050. Exercise: this Keyword | 3min
