@@ -34,6 +34,19 @@
 	- [ ] 031. Hoisting | 11min
 	  - The behavior of moving variables and function-declarations to the top(s) of their respective environments
 	  
+	  **Condition 1**
+	  ```javascript
+	  console.log('1------');
+	  console.log(teddy);
+	  console.log(sing());
+	  
+	  var teddy = 'bear';
+	  
+	  function() sing() {
+	    console.log('ohhh la la la');
+	  }
+	  ```
+	  
 	- [ ] 032. Exercise: Hoisting | 4min
 	- [ ] 033. Exercise: Hoisting 2 | 7min
 	- [ ] 034. Exercise: Hoisting 3 | 1min
