@@ -105,18 +105,33 @@
 	
 	var foodThoughts = function() {
 	
-	  console.log("Original favourite food: " + favouriteFood);
-	
-	  var favouriteFood = "sushi";
-	  
-	  console.log("New favourite food: " + favouriteFood);
+	  console.log("Original favourite food: " + favouriteFood); 	// CREATION PHASE: var favouriteFood is assigned 'undefined'
+	  								// CREATION PHASE: var foodThoughts is assigned 'undefined'
+	  								// CREATION PHASE: var favouriteFood = 'grapes' is ignored
+	  var favouriteFood = "sushi";					// EXECUTION PHASE: favouriteFood = 'grapes' (var keyword is removed)
+	  								// EXECUTION PHASE: foodThoughts = function()
+									
+									THEN
+									
+									// A new Execution Context is created, with its associated
+	  console.log("New favourite food: " + favouriteFood);		// HOISTING CREATION PHASE
 	};
 	
 	foodThoughts();
 	```
 	
-	- [ ] 034. Exercise: Hoisting 3 | 1min
+	- I can try to avoid hoisting by not using var and using const or let instead
+	
 	- [ ] 035. Function Invocation | 7min
+	
+	  - Programs are simply 'assigning variables to memory' and then running functions with the variables.
+	
+	```javascript
+	// Function Expression
+	
+	// Function Declaration
+	```
+	
 	- [ ] 036. arguments Keyword | 4min
 	- [ ] 037. Variable Environment | 7min
 	- [ ] 038. Scope Chain | 12min
