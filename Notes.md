@@ -282,6 +282,17 @@
 	  ```
 	  
 	- [ ] 041. Function Scope vs Block Scope | 4min
+	
+	```javascript
+	if (5>4) {
+	  var secret = '12345';
+	}
+	
+	secret(); // '12345'
+	
+	With const/let, block scope, can't get the secret
+	```
+	
 	- [ ] 042. Exercise: Block Scope | 4min
 	- [ ] 043. Global Variables | 4min
 	- [ ] 044. IIFE | 14min
