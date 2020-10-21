@@ -128,10 +128,48 @@
 	
 	```javascript
 	// Function Expression
+	var canada = () => { 	// Defined at RUN TIME
+	  console.log('cold');
+	}
 	
 	// Function Declaration
+	function india() {	// Defined at PARSE TIME, when the compiler looks at the code and starts allocating memory and hoisting
+	  console.log('warm');
+	}
+	
+	// Function Invocation/Call/Execution
+	canada();	// Create an Execution Context
+	india(); 	// Create an Execution Context
 	```
 	
+	  - When a function is invoked, we create a new Execution Context on top of our Global Execution Context
+	  - Also, we get the 'this' keyword
+	  - unlike the global context, we also get 'arguments'
+	  - See the marry() function below:
+	  
+	```javascript
+	// Function Expression
+	var canada = () => { 	// Defined at RUN TIME
+	  console.log('cold');
+	}
+	
+	// Function Declaration
+	function india() {	// Defined at PARSE TIME, when the compiler looks at the code and starts allocating memory and hoisting
+	  console.log('warm');
+	}
+	
+	// Function Invocation/Call/Execution
+	canada();	// Create an Execution Context // cold
+	india(); 	// Create an Execution Context // warm
+	
+	function marry(person1, person2) {
+	  console.log(arguments);				// arguments {0: 'Tim', 1: 'Tina' }
+	  return `${person1} is now married to ${person2}`;	// => 'Tim is now married to Tina'
+	}
+	
+	marry('Tim', 'Tina');
+	```
+		  
 	- [ ] 036. arguments Keyword | 4min
 	- [ ] 037. Variable Environment | 7min
 	- [ ] 038. Scope Chain | 12min
