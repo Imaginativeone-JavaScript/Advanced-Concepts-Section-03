@@ -122,6 +122,22 @@
 	
 	- I can try to avoid hoisting by not using var and using const or let instead
 	
+	- [ ] 034. Exercise 3
+	```javascript
+	function bigBrother(){
+	  function littleBrother() {
+	    return 'it is me!';
+	  }
+	  return littleBrother();
+	  function littleBrother() {
+	    return 'no me!';
+	  }
+	}
+
+	// Before running this code, what do you think the output is?
+	bigBrother();  // 'no me!'
+	```
+	
 	- [ ] 035. Function Invocation | 7min
 	
 	  - Programs are simply 'assigning variables to memory' and then running functions with the variables.
