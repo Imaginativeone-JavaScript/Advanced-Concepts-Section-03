@@ -99,6 +99,22 @@
 	```
 	
 	- [ ] 033. Exercise: Hoisting 2 | 7min
+	
+	```javascript
+	var favouritefood = "grapes";
+	
+	var foodThoughts = function() {
+	
+	  console.log("Original favourite food: " + favouriteFood);
+	
+	  var favouriteFood = "sushi";
+	  
+	  console.log("New favourite food: " + favouriteFood);
+	};
+	
+	foodThoughts();
+	```
+	
 	- [ ] 034. Exercise: Hoisting 3 | 1min
 	- [ ] 035. Function Invocation | 7min
 	- [ ] 036. arguments Keyword | 4min
