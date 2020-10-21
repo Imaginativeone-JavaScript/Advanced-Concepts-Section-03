@@ -86,11 +86,14 @@
 	```
 	
 	```javascript
+	a(); 	// DURING HOISTING, 2nd function replaces the first IN THE MEMORY LOCATION, producing 'bye'
+		// no matter where a() is called
+	
 	function a() {
 	  console.log('hi');
 	}
 	
-	function b() {
+	function a() {
 	  console.log('bye');
 	}
 	```
