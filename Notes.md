@@ -316,7 +316,32 @@
 	  - Variable Collision/Overwrites
 	
 	- [ ] 044. IIFE | 14min
+	  - Immediately Invoked Function Expression
+	  
+	  ```javascript
+	  ( // Function Expression
+	    function() { // Anonymous Function
+	  
+	    }
+	  )();
+	  
+	  // New execution context with a new variable environment
+	  ```
+	  
+	  ```javascript
+	  var script1 = (function() {
+	    function a() {
+	      return 5;
+	    }
+	    return { a: a }
+	  })(); // Remember to immediately invoke the function
+	  
+	  script1.a() // 5
+	  ```
+	  
 	- [ ] 045. this Keyword | 17min
+	
+	  - **this** is the object that the **function** is a property of 
 	
 	- [ ] 046. Exercise: Dynamic Scope vs Lexical Scope | 12min
 	- [ ] 047. call(), apply(), bind() | 11min
