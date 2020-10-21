@@ -217,8 +217,70 @@
 	  ```
 	
 	- [ ] 038. Scope Chain | 12min
+	
+	  ```javascript
+	  function findName() {
+	    var b = 'b';
+	    return printName();
+	  }
+	
+	  function printName() {
+	    var c = 'c';
+	    return 'Andre Neagoie';
+	  }
+	
+	  function sayMyName() {
+	    var a = 'a';
+	    return findName();
+	  }
+	
+	  sayMyName();
+	  ```
+	  - Each context has a link to its outside-world/parent
+	  - All of these functions have access to the global scope
+	  - Scope chain gives us access to the Parent Environment
+	  - "Static Scope", Lexical Scope
+	  
+	  ```javascript
+	  function sayMyName() {
+	    var a = 'a';
+	    return function findName() {
+	      var b = 'b';
+	      // console.log(c);
+	      return function printName() {
+	        var c = 'c';
+		return 'Andre Neagoie';
+	      }
+	    }
+	  }
+	  
+	  sayMyName(); 		// [Function: findName]
+	  sayMyName()();	// [Function: printName]
+	  sayMyName()()();	// 'Andre Neagoie'
+	  ```
+	  
 	- [ ] 039. [[scope]] | 2min
 	- [ ] 040. Exercise: JS is Weird | 5min
+	
+	  ```javascript
+	  function weird() {
+	    height = 50;	// Not declared, "Leakage of global variables"
+	    return height;
+	  }
+	  ```
+	  
+	  'use strict' was added to get rid of the weirdness
+	  
+	  ```javascript
+	  var heyhey = function doodle() {
+	    // do something
+	    return 'heyhey';
+	  }
+	  
+	  heyhey(); // 'heyhey'
+	  doodle(); // Reference Error, can only access it in heyhey
+	  ```
+	  
 	- [ ] 041. Function Scope vs Block Scope | 4min
 	- [ ] 042. Exercise: Block Scope | 4min
 	- [ ] 043. Global Variables | 4min
