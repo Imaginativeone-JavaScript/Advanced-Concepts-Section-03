@@ -35,6 +35,7 @@
 	  - The behavior of moving variables and function-declarations to the top(s) of their respective environments
 	  
 	  **Condition 1**
+	  
 	  ```javascript
 	  console.log('1------');
 	  console.log(teddy);
@@ -42,11 +43,37 @@
 	  
 	  var teddy = 'bear';
 	  
-	  function() sing() {
+	  function sing() {
 	    console.log('ohhh la la la');
 	  }
 	  ```
+
+	  **Condition 2**
 	  
+	  ```javascript
+	  console.log('1------');
+	  
+	  // Upon 'var' or 'function' >> "Reserve memory for this entity in Memory Heap; not moved up"
+	  var teddy = undefined; // teddy PARTIALLY hoisted here; JS engine during the creation phase
+	  			 // 'const' or 'let' doesn't get hoisted; 'teddy' is not defined
+
+	  function sing() {	 // function (declaration) FULLY hoisted here assigned a location in memory
+	  			 // Putting this function in parentheses gives me a reference error,
+				 // as 'function' not encountered
+	    console.log('ohhh la la la');
+	  }
+	  
+	  var sing2 = function() { // function EXPRESSION; sing2 gets hoisted and equals undefined
+	  			   // sing2() must follow its call to be defined
+	    console.log('uhhh la la la');
+	  }
+
+	  console.log(teddy);
+	  console.log(sing());
+	  
+	  var teddy = 'bear';
+	  ```
+
 	- [ ] 032. Exercise: Hoisting | 4min
 	- [ ] 033. Exercise: Hoisting 2 | 7min
 	- [ ] 034. Exercise: Hoisting 3 | 1min
