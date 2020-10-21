@@ -498,6 +498,32 @@
 	  console.log('2', archer);
 	  ```
 
+	- **Parameters**
+	  ```javascript
+	  const wizard = {
+	    name: 'Merlin',
+	    health: 50,
+	    heal(num1, num2) {
+	      return this.health += num1 + num2;
+	    }
+	  }
+	  
+	  // How can I borrow the heal() method for the archer?
+	  // wizard.heal.call(archer);
+	  
+	  const archer = {
+	    name: 'Robin Hood',
+	    health: 30
+	  }
+	  
+	  console.log('1', archer);
+	  wizard.heal.call(archer, 50, 30); // health: 110
+	  console.log('2', archer);
+	  ```
+	  
+	  **apply()** is very similar to call, except that it takes an array of parameters
+	  
+	
 	- [ ] 048. Exercise: call(), apply() | 1min
 	- [ ] 049. bind() and currying | 4min
 	- [ ] 050. Exercise: this Keyword | 3min
