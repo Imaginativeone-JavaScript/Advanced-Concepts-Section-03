@@ -474,6 +474,29 @@
 	```
 
 	- [ ] 047. call(), apply(), bind() | 11min
+	  - Underneath the hood, all functions use call(); '()' is just a shorthand
+	  
+	  ```javascript
+	  const wizard = {
+	    name: 'Merlin',
+	    health: 50,
+	    heal() {
+	      return this.health = 100;
+	    }
+	  }
+	  
+	  // How can I borrow the heal() method for the archer?
+	  // wizard.heal.call(archer);
+	  
+	  const archer = {
+	    name: 'Robin Hood',
+	    health: 30
+	  }
+	  
+	  console.log('1', archer);
+	  wizard.heal.call(archer);
+	  console.log('2', archer);
+	  ```
 
 	- [ ] 048. Exercise: call(), apply() | 1min
 	- [ ] 049. bind() and currying | 4min
