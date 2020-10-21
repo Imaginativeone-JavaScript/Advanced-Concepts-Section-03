@@ -169,8 +169,28 @@
 	
 	marry('Tim', 'Tina');
 	```
-		  
+	
 	- [ ] 036. arguments Keyword | 4min
+	  - arguments is not an array
+	  - It is iterable, however
+	  
+	  ```javascript
+	  console.log(Array.from(arguments)); // ['Tim', 'Tina']
+	  ```
+	  ```javascript 
+	  function marry2(...args) { // Spread Operator
+	    console.log('arguments', args);			// arguments {0: 'Tim', 1: 'Tina' }
+	    console.log(Array.from(arguments)); 			// ['Tim', 'Tina']
+
+	    return `${args[0]} is now married to ${args[1]}`;	// => 'Tim is now married to Tina'
+	  }
+	  ```
+	  
+	  ```javascript
+	  india();
+	  console.log(arguments); // {} Empty 'arguments' object
+	  ```
+	  
 	- [ ] 037. Variable Environment | 7min
 	- [ ] 038. Scope Chain | 12min
 	- [ ] 039. [[scope]] | 2min
