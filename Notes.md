@@ -406,6 +406,73 @@
 	}
 	```
 	
+	```javascript
+	const obj = {
+	  name: 'Billy',
+	  sing() {
+	    console.log('a', this);
+	    
+	    var anotherFunc = function() {
+	      console.log('b', this); 		// The Window Object?? Why not obj?
+	    }					// The this keyword is not lexically scoped
+	    					// this is dynamically scoped
+	    					// The sing() function ran anotherFunc()
+	    anotherFunc();
+	    
+	  }
+	}
+	```
+
+	```javascript
+	const obj = {
+	  name: 'Billy',
+	  sing() {
+	    console.log('a', this);
+	    
+	    var anotherFunc = () => {		// ES6 Solution
+	      console.log('b', this);
+	    }
+	    anotherFunc();
+	    
+	  }
+	}
+	
+	obj.sing();
+	```
+	
+	```javascript
+	const obj = {
+	  name: 'Billy',
+	  sing() {
+	    console.log('a', this);
+	    
+	    var anotherFunc = function() {	// bind() Solution
+	      console.log('b', this);
+	    }
+	    return anotherFunc.bind(this);
+	  }
+	}
+	
+	obj.sing()();
+	```
+
+	```javascript
+	const obj = {
+	  name: 'Billy',
+	  sing() {
+	    console.log('a', this);
+	    
+	    var self = this;
+	    var anotherFunc = function() {	// self Solution
+	      console.log('b', self);
+	    }
+	    return anotherFunc;
+	  }
+	}
+	
+	obj.sing()();
+	```
+
 	- [ ] 047. call(), apply(), bind() | 11min
 
 	- [ ] 048. Exercise: call(), apply() | 1min
